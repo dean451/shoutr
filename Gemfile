@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'clearance'
 gem 'paperclip'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'jquery-rails'
 
 
 group :development, :test do
