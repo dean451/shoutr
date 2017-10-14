@@ -5,7 +5,6 @@ class FollowersController < ApplicationController
     @followers = @user.followers
   end
 
-
   private
 
   def find_user
