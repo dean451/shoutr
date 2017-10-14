@@ -2,9 +2,7 @@ class ShoutsController < ApplicationController
 
   def show
     @shout = Shout.find(params[:id])
-
   end
-
 
   def create
     shout = current_user.shouts.create(shout_params)
@@ -38,7 +36,6 @@ class ShoutsController < ApplicationController
     else
       { alert: "could not shout" }
     end
-
   end
 
 end
