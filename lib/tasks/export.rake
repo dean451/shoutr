@@ -4,6 +4,8 @@ namespace :export do
       Shout.order(:id).all.each do |country|
          puts "Shouts.create(#{country.serializable_hash.delete_if {|key, value| ['created_at','updated_at','id'].include?(key)}.to_s.gsub(/[{}]/,'')})"
       end
+      User.order(:id).all.each do |user|
+        puts "Users.create(#{user.serializable_hash.delete_if {|key, value| ['created_at', 'updated_at', 'id'].include?(key)}.to_s.gsub(/[{}]/,'')})"
+      end
    end
 end
-
