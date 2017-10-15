@@ -1,10 +1,11 @@
 class Timeline
-  def initialize(user)
-    @user = user
+  def initialize(users)
+    @users = users
   end
 
   def shouts
-    Shout.where(user_id: user).
+    Shout.
+    where(user_id: users).
     order(created_at: :desc)
   end
 
@@ -14,6 +15,6 @@ class Timeline
 
   private
 
-  attr_reader :user
+  attr_reader :users
 
 end
