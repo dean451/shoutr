@@ -4,15 +4,16 @@ class Timeline
   end
 
   def shouts
-    Shout.where(user_id: timeline_ids).order(created_at: :desc)
+    Shout.where(user_id: user).
+    order(created_at: :desc)
+  end
+
+  def to_partial_path
+    "timelines/timeline"
   end
 
   private
 
   attr_reader :user
-
-  def timeline_ids
-    user.followed_user_ids + [user.id]
-  end
 
 end
