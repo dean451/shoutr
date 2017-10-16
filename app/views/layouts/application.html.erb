@@ -14,6 +14,7 @@
       Signed in as: <%= current_user.email %>
 
       <%= button_to 'Sign out', sign_out_path, method: :delete, style: "float:right" %>
+      <%= link_to 'Dashboard', root_path, style: 'float:right', class: 'btn-success' %>
     <% else %>
       <%= link_to 'Sign in', sign_in_path %>
     <% end %>
