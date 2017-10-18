@@ -5,7 +5,5 @@ class PhotoShout < ApplicationRecord
     size: { in: 0..10.megabytes },
     presence: true
 
-    searchable do
-      text :image_file_name
-    end
+    
 end
