@@ -38,12 +38,14 @@ gem 'jbuilder', '~> 2.5'
 gem 'clearance'
 gem 'paperclip'
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'jquery-rails'
+
+gem 'sunspot_rails'
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'sunspot_solr'
 end
 
 group :development do
